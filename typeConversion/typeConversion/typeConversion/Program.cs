@@ -8,16 +8,13 @@ namespace typeConversion
         static void Main(string[] args)
         {
             try
-            { 
-                var number = "1234";
-                // this will cause System.OverflowException
-                byte b = Convert.ToByte(number);
-                Console.WriteLine(b);
+            {
+                string str = "true";
+                bool b = Convert.ToBoolean(str);
             }
             catch (Exception)
-                
             {
-                Console.WriteLine("the number couldn't be   converted to a byte");
+                Console.WriteLine(b);
             }
 
         }
