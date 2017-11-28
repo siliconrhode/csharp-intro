@@ -10,7 +10,7 @@ namespace Classes
 
         public void Introduce()
         {
-            Console.WriteLine("My name is " + FirstName + " " + LastName);
+            Console.WriteLine("Hi, my first name is:" + FirstName + " last name is:"+LastName);
         }
     }
     class Program
@@ -21,6 +21,7 @@ namespace Classes
             john.FirstName = "John";
             john.LastName = "Smith";
             john.Introduce();
+
         }
     }
 }
