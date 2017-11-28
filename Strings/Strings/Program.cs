@@ -8,10 +8,22 @@ namespace Strings
     {
         static void Main(string[] args)
         {
-            // create an array 
-            var numbers = new int[3] {1, 2.3};
-            // join the aray elements 
-            string list = string.Join(",", numbers);
+            var firstName = "John";
+            var lastName = "Hardy";
+
+            var fullName = firstName + " " + lastName;
+            Console.WriteLine(fullName);
+            var myFullName = string.Format("{0} {1}",firstName,lastName);
+            Console.WriteLine(myFullName);
+            var names = new string[3] {"Sam", "Dam", "Ham"};
+            var formattedNames = string.Join(",", names);
+            Console.WriteLine(formattedNames);
+
+           
+
+
+
+
 
         }
     }
