@@ -19,7 +19,10 @@ namespace Strings
             var formattedNames = string.Join(",", names);
             Console.WriteLine(formattedNames);
 
-            var text = "Hi John\nLook into the following paths\nc:\\folder1\\folder2\nc:\\folder3\\folder4";
+                    var text = @"Hi John
+Look into the following paths
+c:\folder1\folder2
+c:\folder3\folder4";
             Console.WriteLine(text);
             
 
