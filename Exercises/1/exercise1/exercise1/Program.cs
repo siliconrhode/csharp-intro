@@ -11,20 +11,22 @@ namespace exercise1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a number");
-            
-            int number = Convert.ToInt32(Console.ReadLine());
+            OneToTen();
+        }
 
-            if (number >= 1 && number <= 10)
+        public static void OneToTen()
+        {
+            Console.WriteLine("Please enter a number you can represt using your hands");
+            int userinput = Convert.ToInt32(Console.ReadLine());
+
+            if (userinput >= 1 && userinput <= 10)
             {
                 Console.WriteLine("Valid");
             }
-
             else
             {
                 Console.WriteLine("Invalid");
             }
-        ;
-    }
+        }
     }
 }
