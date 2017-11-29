@@ -8,19 +8,11 @@ namespace Conditionals
     {
         static void Main(string[] args)
         {
-            var season = Season.Autumn;
+            bool isGoldCustomer = true;
 
-            switch (season)
-            {
-                case Season.Autumn:
-                case Season.Summer:
-                    Console.WriteLine("50% off");
-                    break;
+            float price = (isGoldCustomer) ? 19.95f : 29.95f;
 
-                default:
-                    Console.WriteLine("Everything else sucks");
-                    break;
-            }
+            Console.WriteLine(price);
         }
     }
 }
