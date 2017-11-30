@@ -7,20 +7,20 @@ namespace iterationStatements
     {
         static void Main(string[] args)
         {
-            //Print even numbers from 1 to 10;
-            for (int i = 1; i <= 10; i++)
+            var name = "John Hardy";
+            //Display letter by letter in a string using for loop
+            //for (int i = 0; i < name.Length; i++)
+            //{
+            //    Console.WriteLine(name[i]);
+            //}
+
+            //..... using a foreach loop
+            foreach (var letter in name)
             {
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
+                Console.WriteLine(letter);
             }
-            //Print even numbers from 10 to 1;
-            for (int i = 10; i >= 1; i--)
-            {   if (i%2 == 0)
-                Console.WriteLine(i);
-            }
-                
+            //.......using 
+
         }
 
     }
