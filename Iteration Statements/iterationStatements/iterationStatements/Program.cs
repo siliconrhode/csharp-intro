@@ -7,20 +7,11 @@ namespace iterationStatements
     {
         static void Main(string[] args)
         {
-            var name = "John Hardy";
-            //Display letter by letter in a string using for loop
-            //for (int i = 0; i < name.Length; i++)
-            //{
-            //    Console.WriteLine(name[i]);
-            //}
-
-            //..... using a foreach loop
-            foreach (var letter in name)
+            var array = new int[3] {1, 2, 3};
+            foreach (var number in array)
             {
-                Console.WriteLine(letter);
+                Console.WriteLine(number);
             }
-            //.......using 
-
         }
 
     }
