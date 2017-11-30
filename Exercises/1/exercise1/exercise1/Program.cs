@@ -46,8 +46,8 @@ namespace exercise1
             {
                 Console.WriteLine("The maximum number is {0}",secondNumber);
             }
-    }
+        }   
 
-
+        public
     }
 }
