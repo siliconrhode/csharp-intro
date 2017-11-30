@@ -90,6 +90,10 @@ namespace exercise1
                     
                 }
             }
+            else
+            {
+                Console.WriteLine("Ok");
+            }
 
         }
     }
