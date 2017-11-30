@@ -11,7 +11,8 @@ namespace Exercises
         static void Main(string[] args)
         {
             //CountNumDivisibleBy3();
-            OkOrExit();
+            //OkOrExit();
+            Factorial();
         }
 
         public static void CountNumDivisibleBy3()
@@ -49,5 +50,20 @@ namespace Exercises
                         Console.WriteLine("The sum of the numbers you have entered is : " + sum);
             }
         }
+
+        public static void Factorial()
+        {
+            Console.WriteLine("Please enter a number to calculate it's factorial");
+            var userInput = Convert.ToInt32(Console.ReadLine());
+            var factorial = userInput;
+            var answer = 1;
+            while (factorial > 1)
+            {
+                answer *= factorial;
+                factorial--;
+            }
+            Console.WriteLine("{0}! = {1}",userInput,answer);
+        }
+
     }
 }
