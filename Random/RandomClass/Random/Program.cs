@@ -14,7 +14,7 @@ namespace Random
 
             for (int i = 0; i < 5; i++)
             {
-                Console.Write(((char)random.Next(97,122)));
+                Console.Write(((char)( 'a' + random.Next(0,26))));
             }
                 Console.WriteLine();
 
