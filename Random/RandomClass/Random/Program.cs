@@ -10,13 +10,18 @@ namespace Random
     {
         static void Main(string[] args)
         {
+            // declare an instance of random
             var random = new System.Random();
-
-            for (int i = 0; i < 5; i++)
+            // declare a ten elements array of type character 
+            var buffer = new char[10];
+            // store a random character in each element
+            for (int i = 0; i < 10; i++)
             {
-                Console.Write(((char)( 'a' + random.Next(0,26))));
+                buffer[i] = (char)('a' + (random.Next(0, 26)));
             }
-                Console.WriteLine();
+            // new string (arrayOfCharacters);
+                var password = new string(buffer); 
+                Console.WriteLine(password);
 
 
         }
