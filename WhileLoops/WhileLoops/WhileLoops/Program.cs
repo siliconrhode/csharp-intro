@@ -11,8 +11,8 @@ namespace WhileLoops
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
+            //while (true)
+            //{
                 Console.WriteLine("Type your name: ");
                 var input = Console.ReadLine();
 
@@ -20,9 +20,9 @@ namespace WhileLoops
                 {
                 Console.WriteLine("@Echo: " + input);
                 }
-                break;
-            }
+                //break;
+            //}
         }
-}
     }
+}
 
