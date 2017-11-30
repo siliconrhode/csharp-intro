@@ -11,17 +11,19 @@ namespace WhileLoops
     {
         static void Main(string[] args)
         {
-            //while (true)
-            //{
-                Console.WriteLine("Type your name: ");
-                var input = Console.ReadLine();
-
-                if (!String.IsNullOrWhiteSpace(input))
+            // Use the "continue"
+            while (true)
+            {
+                Console.WriteLine("Please enter your name");
+                var name = Console.ReadLine();
+                if (!String.IsNullOrWhiteSpace(name))
                 {
-                Console.WriteLine("@Echo: " + input);
+                    Console.WriteLine("@Echo: " + name);
+                    continue;
                 }
-                //break;
-            //}
+
+                break;
+            }
         }
     }
 }
