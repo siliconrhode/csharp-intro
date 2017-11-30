@@ -12,7 +12,9 @@ namespace Exercises
         {
             //CountNumDivisibleBy3();
             //OkOrExit();
-            Factorial();
+            //Factorial();
+            guessNumber();
+
         }
 
         public static void CountNumDivisibleBy3()
@@ -63,6 +65,40 @@ namespace Exercises
                 factorial--;
             }
             Console.WriteLine("{0}! = {1}",userInput,answer);
+        }
+
+        public static void guessNumber()
+        {
+            var random = new Random();
+            var computerNumber = random.Next(1, 10);
+            Console.WriteLine("guess the number");
+            //Console.WriteLine("The secret answer is:{0}",computerNumber);
+            var userGuess = Convert.ToInt32(Console.ReadLine());
+            bool won = false;
+            for (int i =1; i <= 4;i++)
+            {
+                if (userGuess == computerNumber)
+                {
+                    
+                    won = true;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("try again");
+                    userGuess = Convert.ToInt32(Console.ReadLine());
+
+
+                }
+            }
+            if (won)
+            {
+                    Console.WriteLine("You won");
+            }
+            else
+            {
+                    Console.WriteLine("You lost");
+            }
         }
 
     }
