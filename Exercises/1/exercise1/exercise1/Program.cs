@@ -12,7 +12,8 @@ namespace exercise1
         static void Main(string[] args)
         {
             //OneToTen();
-            MaxOfTwo();
+            //MaxOfTwo();
+            PortraitOrLandscape();
 
         }
 
@@ -46,8 +47,24 @@ namespace exercise1
             {
                 Console.WriteLine("The maximum number is {0}",secondNumber);
             }
-        }   
+        }
 
-        public
+        public static void PortraitOrLandscape()
+        {
+            Console.WriteLine("Please enter your picture Length");
+            int length = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please enter your picture Width");
+            int width = Convert.ToInt32(Console.ReadLine());
+
+            if (width > length)
+            {
+                Console.WriteLine("Landscape");
+            }
+            else
+            {
+                Console.WriteLine("Portrait");
+            }
+        }
     }
 }
