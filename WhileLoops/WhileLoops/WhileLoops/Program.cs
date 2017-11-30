@@ -19,8 +19,8 @@ namespace WhileLoops
                 if (!String.IsNullOrWhiteSpace(input))
                 {
                 Console.WriteLine("@Echo: " + input);
-                    break;
                 }
+                break;
             }
         }
 }
