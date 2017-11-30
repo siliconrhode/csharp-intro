@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,8 @@ namespace exercise1
         {
             //OneToTen();
             //MaxOfTwo();
-            PortraitOrLandscape();
+            //PortraitOrLandscape();
+            SpeedCam();
 
         }
 
@@ -65,6 +67,30 @@ namespace exercise1
             {
                 Console.WriteLine("Portrait");
             }
+        }
+
+        public static void SpeedCam()
+        {
+            Console.WriteLine("Please Enter the speed limit");
+            int speedLimit = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please Enter the car speed");
+            int carSpeed = Convert.ToInt32(Console.ReadLine());
+
+            if (carSpeed > speedLimit)
+            {
+                int demerit = (carSpeed - speedLimit) / 5;
+                if (demerit > 12)
+                {
+                    Console.WriteLine("Your license have been suspended");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("You've been given {0} demerit points",demerit);
+                    
+                }
+            }
+
         }
     }
 }
