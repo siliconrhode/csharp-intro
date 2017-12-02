@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace Exercises
 {
@@ -13,7 +15,8 @@ namespace Exercises
             //CountNumDivisibleBy3();
             //OkOrExit();
             //Factorial();
-            guessNumber();
+            //guessNumber();
+            MaxOf();
 
         }
 
@@ -99,6 +102,26 @@ namespace Exercises
             {
                     Console.WriteLine("You lost");
             }
+
+        }
+
+        public static void MaxOf()
+        {
+            Console.WriteLine("Please enter a serious of numbers separated by  \",\"");
+            var userInput = Console.ReadLine();
+            var inputArray = userInput.Split(',');
+            var max = Convert.ToInt32(inputArray[0]);
+            foreach (var suspect in inputArray)
+            {
+                if (max < Convert.ToInt32(suspect))
+                {
+                    max = Convert.ToInt32(suspect);
+
+                }
+            }
+            Console.WriteLine("Max number is " + max);
+
+
         }
 
     }
