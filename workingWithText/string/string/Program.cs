@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -28,7 +29,20 @@ namespace @string
             Console.WriteLine("First Name: "+ names[0] );
             Console.WriteLine("Second Name: "+ names[1] );
 
+            Console.WriteLine(fullName.Replace("John", "Caleb"));
 
+            if (String.IsNullOrWhiteSpace(" "))
+            {
+                Console.WriteLine("Invalid");
+            }
+            //Convert from string to Byte
+
+            var str = "25";
+            var age = Convert.ToByte(str);
+            Console.WriteLine(age);
+
+            float price = 29.95f;
+            Console.WriteLine(price.ToString("C"));
         }
     }
 }
