@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,10 @@ namespace Exercises
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Duplicate());
+            //AscendigOrDescending();
+            //Duplicate();
+            ValidateTime();
+
         }
 
         static string AscendingOrDescending()
@@ -54,13 +58,14 @@ namespace Exercises
 
         }
 
-        public static string Duplicate()
+        public static void  Duplicate()
         {
             Console.WriteLine("Please enter numbers separated by a hyphen");
             var userInput = Console.ReadLine();
             if (String.IsNullOrWhiteSpace(userInput))
             {
-                Console.WriteLine("Ext");
+                return;
+                
             }
             var numbers = new List<int>();
             foreach (var number in userInput.Split('-'))
@@ -72,10 +77,46 @@ namespace Exercises
             {
                 if (numbers[i - 1] == numbers[i])
                 {
-                    return "Duplicate";
+                    Console.WriteLine("Duplicate");
+                    ;
                 }
             }
-            return "Non Duplicate";
+            Console.WriteLine("Non Duplicate");
+        }
+
+        public static void ValidateTime()
+        {
+
+            Console.WriteLine("Please enter time vale ing the 24-hour time format (e.g. 19:00)");
+            var userInput = Console.ReadLine();
+            if (String.IsNullOrWhiteSpace(userInput))
+            {
+                Console.WriteLine("Invalid Time");
+                return;
+            }
+            var userInputArray = userInput.Split(':');
+            var userInputList = new List<int>();
+            foreach (var str in userInputArray)
+            {
+                userInputList.Add(Convert.ToByte(str));
+            }
+            if (userInputList[0] >= 00 && userInputList[0] <= 23)
+            {
+                if (userInputList[1] >= 00 && userInputList[1] <= 59)
+                {
+                    Console.WriteLine("Ok");
+                    return;
+                    
+                }
+            }
+            Console.WriteLine("Invalid Time");
+
+
+
+
+            
+            
+            
         }
 
 
