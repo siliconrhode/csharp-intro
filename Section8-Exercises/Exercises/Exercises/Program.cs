@@ -14,7 +14,8 @@ namespace Exercises
             //AscendigOrDescending();
             //Duplicate();
             //ValidateTime();
-            PascalConverter();
+            //PascalConverter();
+            //VowelCount();
 
         }
 
@@ -150,6 +151,25 @@ namespace Exercises
 
 
             
+        }
+
+        public static void VowelCount()
+        {
+            Console.WriteLine("Please enter a word to count vowels");
+            var userInput = Console.ReadLine();
+            userInput.ToLower();
+
+            var vowelsList = new List<char>(new char[] {'a','e','o','i','u'});
+            var vowelsTotal = 0;
+            foreach (var letter in userInput)
+            {
+                if (vowelsList.Contains(letter))
+                {
+                    vowelsTotal++;
+                }
+            }
+
+            Console.WriteLine(vowelsTotal);
         }
 
 
