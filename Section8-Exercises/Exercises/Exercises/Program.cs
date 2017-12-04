@@ -95,28 +95,38 @@ namespace Exercises
                 return;
             }
             var userInputArray = userInput.Split(':');
-            var userInputList = new List<int>();
-            foreach (var str in userInputArray)
+            if (userInputArray.Length != 2)
             {
-                userInputList.Add(Convert.ToByte(str));
+                Console.WriteLine("Invalid Time");
+                return;
             }
-            if (userInputList[0] >= 00 && userInputList[0] <= 23)
+            try
             {
-                if (userInputList[1] >= 00 && userInputList[1] <= 59)
+                var userInputList = new List<int>();
+                foreach (var str in userInputArray)
                 {
-                    Console.WriteLine("Ok");
-                    return;
-                    
+                    userInputList.Add(Convert.ToByte(str));
+                }
+                if (userInputList[0] >= 00 && userInputList[0] <= 23)
+                {
+                    if (userInputList[1] >= 00 && userInputList[1] <= 59)
+                    {
+                        Console.WriteLine("Ok");
+                        return;
+
+                    }
                 }
             }
-            Console.WriteLine("Invalid Time");
+            catch (Exception)
+            {
+                Console.WriteLine("Invalid Time");
+            }
 
 
 
 
-            
-            
-            
+
+
         }
 
 
