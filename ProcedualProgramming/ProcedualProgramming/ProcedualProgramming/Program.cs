@@ -22,6 +22,7 @@ namespace ProcedualProgramming
             {
                 array[name.Length - i] = name[i - 1];
             }
+
             return new string(array);
         }
     }
