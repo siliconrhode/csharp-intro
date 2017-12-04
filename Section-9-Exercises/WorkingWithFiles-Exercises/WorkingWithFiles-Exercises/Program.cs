@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace WorkingWithFiles_Exercises
@@ -12,6 +13,7 @@ namespace WorkingWithFiles_Exercises
             var fileLocation = (@"C:\Users\Widows Pc\Documents\NoRuleModels.txt");
             var content = File.ReadAllText(fileLocation);
             Console.WriteLine(CountWords(content));
+            Console.WriteLine(ShowLongestWord(content));
         }
 
         public static int CountWords(string text)
@@ -22,6 +24,22 @@ namespace WorkingWithFiles_Exercises
                 wordCount++;
             }
             return wordCount;
+        }
+
+        public static string ShowLongestWord(string content)
+        {
+            var wordList = new List<string>();
+            var longestWord = "";
+            var length = 0;
+            foreach(var word in content.Split(' '))
+            {
+                if (word.Length > length)
+                {
+                    longestWord = word;
+                    length = word.Length;
+                }
+            }
+            return longestWord;
         }
 
     }
