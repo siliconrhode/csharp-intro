@@ -13,7 +13,8 @@ namespace Exercises
         {
             //AscendigOrDescending();
             //Duplicate();
-            ValidateTime();
+            //ValidateTime();
+            PascalConverter();
 
         }
 
@@ -127,6 +128,28 @@ namespace Exercises
 
 
 
+        }
+
+        public static void PascalConverter()
+        {
+            Console.WriteLine("Please enter few words separated by space");
+            var userInput = Console.ReadLine();
+
+            if (String.IsNullOrWhiteSpace(userInput))
+            {
+                Console.WriteLine("Invalid Input");
+                return;
+            }
+            var variableName = "";
+            foreach (var word in userInput.Split(' '))
+            {
+                var wordInPascal  = char.ToUpper(word[0]) + word.ToLower().Substring(1);
+                variableName += wordInPascal;
+            }
+            Console.WriteLine(variableName);
+
+
+            
         }
 
 
